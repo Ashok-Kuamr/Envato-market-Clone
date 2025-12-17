@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    cursor: none;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    cursor: circular;
+}
+
+/* ENVATO BAR */
+.envato-bar {
+    height: 54px;
+    background: #2b2b2b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.envato-logo {
+    font-size: 16px;
+    color: #fff;
+}
+
+.envato-buy {
+    background: #7ac943;
+    color: #f4f4f4;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f4a261;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.info-bar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    background: rgba(0,0,0,0.85);
+}
+
+/* RIGHT SIDE GROUP */
+.info-right {
+    margin-left: auto;          
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* keep existing info-item styles */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.appointment-btn {
+    margin-left: auto;
+    padding: 12px 26px;
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background: #f4a261;
+    color: #000;
+    border-color: #f4a261;
+    box-shadow: 0 0 12px rgba(244, 162, 97, 0.5);
+}
+
+.profile img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.profile img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 12px rgba(244, 162, 97, 0.6);
+}
+
+
+/* NAVBAR */
+.main-nav {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background: rgba(0,0,0,0.8);
+}
+
+.main-nav a {
+    font-size: 14px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.main-nav a.active {
+    color: #f4a261;
+    border-bottom: 2px solid #f4a261;
+    padding-bottom: 6px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: calc(100vh - 214px);
+
+    background: url("bg.png") center / cover no-repeat;
+
+    background-size: contain;
+    background-position: 210% center;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    overflow: hidden;
+}
+
+
+#stars {
+    background: transparent;
+    pointer-events: none;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-80px);
+    }
+
+.subtitle {
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    max-width: 720px;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: transparent;
+    border: 1px solid #666;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #f4a261;
+    color: #000;
+    border-color: #f4a261;
+    box-shadow: 0 0 15px rgba(244, 162, 97, 0.6);
+    transform: translateY(-2px);
+}
+
+
+/* FACE OVERLAY */
+.face-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: url("C:\Users\pc\OneDrive\Desktop\New clone\bg.png")
+        center/cover no-repeat;
+    opacity: 0.25;
+    z-index: 2;
+}
+
+
+/* CURSOR DOT */
+.custom-cursor {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #f4a261;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+/* CURSOR RING */
+.cursor-ring {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid #f4a261;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+}
+.cursor-ring.active {
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+/* HERO TEXT ANIMATION INITIAL STATE */
+/* INITIAL STATES */
+
+/* Subtitle & Button → from bottom */
+.hero-content .subtitle,
+.hero-content .hero-btn {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+/* Heading → from left */
+.hero-content h1 {
+    opacity: 0;
+    transform: translateX(-80px);
+}
+
+
+.hero-animate {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: all 0.9s ease-out;
+}
+
+.hero-content .subtitle {
+    transition-delay: 0.1s;
+}
+
+.hero-content h1 {
+    transition-delay: 0.5s;
+}
+
+.hero-content .hero-btn {
+    transition-delay: 0.8s;
+}
